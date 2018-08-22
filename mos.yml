@@ -9,7 +9,7 @@ platforms: [ esp32, esp8266 ]
 sources:
 - src
 includes:
-- include
+- includes
 
 tags:
 - communication
