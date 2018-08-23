@@ -11,6 +11,9 @@ sources:
 includes:
 - includes
 
+libs:
+  - origin: https://github.com/mongoose-os-libs/arduino-compat
+
 tags:
 - communication
 - c
