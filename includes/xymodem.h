@@ -23,7 +23,6 @@
 #define YMODEM_H_INC
 
 #include "Arduino.h"
-#include <SoftwareSerial.h>
 #include <FS.h>
 #include "Crc16.h"
 
@@ -64,13 +63,12 @@ class XYModem
 		};
 
 		XYModem(Stream &serial, XYModem::Protocol mode);
-		XYModem(Stream &serial, XYModem::Protocol mode, SoftwareSerial &debug);
+		XYModem(Stream &serial, XYModem::Protocol mode);
 
 		bool transmit(File &file);
 
 	private:
 
-		SoftwareSerial *debug = NULL;
 		XYModem::Protocol protocol;
 		Stream *stream;
 		XYModem::ChecksumType checksum_type;

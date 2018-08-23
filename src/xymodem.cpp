@@ -30,9 +30,9 @@ XYModem::XYModem(Stream &serial, XYModem::Protocol mode)
 
 }
 
-XYModem::XYModem(Stream &serial, XYModem::Protocol mode, SoftwareSerial &debug)
+XYModem::XYModem(Stream &serial, XYModem::Protocol mode)
 {
-	this->debug = &debug;
+	this->debug = NULL;
 	this->protocol = mode;
 	this->stream = &serial;
 	this->checksum_type = ChecksumType::NONE;
